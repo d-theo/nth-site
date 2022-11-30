@@ -1,39 +1,102 @@
-.App {
-  text-align: center;
+.app-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: calc(100% - 64px);
+  font-size: 24px;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  padding: 32px 64px;
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.app-body {
   display: flex;
-  flex-direction: column;
+  margin-top: 150px;
+  padding: 64px;
+}
+
+.header-title {
+  display: grid;
+  grid-column: 1 / 3;
+  justify-self: start;
+  align-self: center;
+  font-size: 32px;
+  font-family: "Forum";
+}
+.header-nav {
+  display: grid;
+  grid-column: 3/4;
+  align-self: center;
+  font-size: 16px;
+  font-family: "OPTIBerlingSemiBoldAgency";
+}
+.header-actions {
+  grid-column: 12/12;
+  justify-self: end;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+.actions {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.gallery {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.bio-section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.bio-section-1 {
+  display: grid;
+  grid-column: 2 / 6;
+  font-size: 24px;
+  font-family: "Forum";
+}
+
+ul {
+  display: flex;
+  list-style-type: "none";
+}
+
+li {
+  margin-right: 16px;
+  display: flex;
+}
+
+a {
+  position: relative;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a.selected::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  top: 24px;
+  left: 0;
+}
+
+a:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
 }
